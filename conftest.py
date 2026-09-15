@@ -18,7 +18,6 @@ def pytest_addoption(parser):
     )
 
 
-
 @pytest.fixture(scope="function")
 def browser_fixture(request):
     global driver
