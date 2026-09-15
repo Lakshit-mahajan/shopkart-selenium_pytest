@@ -25,7 +25,7 @@ def browser_fixture(request):
     if browser == "firefox":
         option = webdriver.FirefoxOptions()
         option.add_argument("--start-maximized")
-        option.add_argument("--new-headless")
+        option.add_argument("-headless")
         driver = webdriver.Firefox(options=option)
 
     elif browser == "edge":
