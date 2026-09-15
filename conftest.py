@@ -23,10 +23,10 @@ def browser_fixture(request):
     global driver
     browser = request.config.getoption("browser")
     if browser == "firefox":
-        service = Service("C:/Users/ASUS/Downloads/geckodriver-v0.37.1-win64/geckodriver.exe")
         option = webdriver.FirefoxOptions()
         option.add_argument("--start-maximized")
-        driver = webdriver.Firefox(service=service,options=option)
+        option.add_argument("--new-headless")
+        driver = webdriver.Firefox(options=option)
 
     elif browser == "edge":
         option = webdriver.EdgeOptions()
