@@ -26,6 +26,7 @@ def browser_fixture(request):
     if browser == "firefox":
         service = Service("C:/Users/ASUS/Downloads/geckodriver-v0.37.1-win64/geckodriver.exe")
         option = webdriver.FirefoxOptions()
+        option.add_argument("-headless")
         driver = webdriver.Firefox(service=service,options=option)
 
     elif browser == "edge":
